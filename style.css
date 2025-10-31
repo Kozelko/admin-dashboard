@@ -1,0 +1,22 @@
+.content {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas:
+        'dashboard header'
+        'dashboard main'
+    ;
+}
+
+.dashboard {
+    grid-area: dashboard;
+    display: grid;
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
