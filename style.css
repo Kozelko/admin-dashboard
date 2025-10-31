@@ -1,22 +1,34 @@
 .content {
+    max-width: 1300px;
+    margin: auto;
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 5fr;
     grid-template-areas:
-        'dashboard header'
-        'dashboard main'
+        'dashboard header header'
+        'dashboard main sidebar'
     ;
 }
 
 .dashboard {
     grid-area: dashboard;
     display: grid;
+    border: 1px black solid;
 }
 
 .header {
     grid-area: header;
+    border: 1px black solid;
 }
 
 .main {
     grid-area: main;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    border: 1px black solid;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    border: 1px black solid;
 }
