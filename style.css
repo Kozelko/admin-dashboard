@@ -68,6 +68,9 @@ li {
 .header {
     padding-left: 50px;
     padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .header-top {
@@ -118,4 +121,19 @@ li {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+.main {
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 20px;
 }
