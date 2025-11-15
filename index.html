@@ -2,68 +2,57 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dashboard</title>
 </head>
 
 <body>
     <div class="content">
+
+        <!-- SIDEBAR -->
         <div class="dashboard">
             <ul class="dashboard-logo">
                 <li>
-                    <img src="assets/placeholder.png" alt="">
+                    <img class="icon-white dashboard-img" src="assets/view-dashboard.svg" alt="" />
                     <h1>Dashboard</h1>
                 </li>
             </ul>
+
             <ul class="dashboard-nav">
-                <li>
-                    <img src="assets/placeholder.png" alt=""><a href="#">Home</a>
-                </li>
-                <li>
-                    <img src="assets/placeholder.png" alt=""><a href="#">Profile</a>
-                </li>
-                <li>
-                    <img src="assets/placeholder.png" alt=""><a href="#">Messages</a>
-                </li>
-                <li>
-                    <img src="assets/placeholder.png" alt=""><a href="#">History</a>
-                </li>
-                <li>
-                    <img src="assets/placeholder.png" alt=""><a href="#">Tasks</a>
-                </li>
-                <li>
-                    <img src="assets/placeholder.png" alt=""><a href="#">Communities</a>
-                </li>
+                <li><img class="icon-white" src="assets/home-account.svg"><a href="#">Home</a></li>
+                <li><img class="icon-white" src="assets/face-man-profile.svg"><a href="#">Profile</a></li>
+                <li><img class="icon-white" src="assets/message.svg"><a href="#">Messages</a></li>
+                <li><img class="icon-white" src="assets/history.svg"><a href="#">History</a></li>
+                <li><img class="icon-white" src="assets/file-multiple.svg"><a href="#">Tasks</a></li>
+                <li><img class="icon-white" src="assets/account-group.svg"><a href="#">Communities</a></li>
             </ul>
+
             <ul class="dashboard-settings">
-                <li>
-                    <img src="assets/placeholder.png" alt=""><a href="#">Settings</a>
-                </li>
-                <li>
-                    <img src="assets/placeholder.png" alt=""><a href="#">Support</a>
-                </li>
-                <li>
-                    <img src="assets/placeholder.png" alt=""><a href="#">Privacy</a>
-                </li>
+                <li><img class="icon-white" src="assets/cog.svg"><a href="#">Settings</a></li>
+                <li><img class="icon-white" src="assets/help-box.svg"><a href="#">Support</a></li>
+                <li><img class="icon-white" src="assets/shield-check.svg"><a href="#">Privacy</a></li>
             </ul>
         </div>
+
+        <!-- HEADER -->
         <header class="header">
             <div class="header-top">
                 <div class="search-wrapper">
-                    <img src="assets/placeholder.png" alt="">
+                    <img src="assets/magnify.svg" alt="">
                     <input type="search" class="search-input" aria-label="Search">
                 </div>
                 <div class="header-top-actions">
-                    <img src="assets/placeholder.png" alt="">
-                    <img src="assets/placeholder.png" alt="">
+                    <img src="assets/bell-ring-outline.svg" alt="">
+                    <img src="assets/placeholder.png" class="avatar">
                     <h3>Morgan Oakley</h3>
                 </div>
             </div>
+
             <div class="header-bottom">
                 <div class="user-header">
-                    <img src="assets/placeholder.png" alt="Morgan Oakley" class="avatar">
+                    <img src="assets/placeholder.png" alt="" class="avatar">
                     <div class="user-text">
                         <div class="user-greeting">Hi there,</div>
                         <div class="user-name">Morgan Oakley</div>
@@ -76,65 +65,28 @@
                 </div>
             </div>
         </header>
+
+        <!-- MAIN -->
         <div class="main">
             <div class="main-header">Your Projects</div>
+
             <div class="projects">
-                <div class="card">
-                    <div class="card_body">
-                        <div>
-                            <h3 class="card_title">Super Cool Project</h3>
-                            <p class="card_subtitle">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh
-                                erat, id facilisis felis accumsan nec.</p>
-                        </div>
-                        <div class="card_actions">
-                            <img src="assets/placeholder.png" alt="">
-                            <img src="assets/placeholder.png" alt="">
-                            <img src="assets/placeholder.png" alt="">
-                        </div>
-                    </div>
-                </div>
 
+                <!-- Repeated card (left repeated, but cleaner) -->
+                <!-- Ideally generated by JS -->
                 <div class="card">
                     <div class="card_body">
                         <div>
                             <h3 class="card_title">Super Cool Project</h3>
-                            <p class="card_subtitle">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh
-                                erat, id facilisis felis accumsan nec.</p>
+                            <p class="card_subtitle">
+                                Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat.
+                                Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat.
+                            </p>
                         </div>
                         <div class="card_actions">
-                            <img src="assets/placeholder.png" alt="">
-                            <img src="assets/placeholder.png" alt="">
-                            <img src="assets/placeholder.png" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card_body">
-                        <div>
-                            <h3 class="card_title">Super Cool Project</h3>
-                            <p class="card_subtitle">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh
-                                erat, id facilisis felis accumsan nec.</p>
-                        </div>
-                        <div class="card_actions">
-                            <img src="assets/placeholder.png" alt="">
-                            <img src="assets/placeholder.png" alt="">
-                            <img src="assets/placeholder.png" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card_body">
-                        <div>
-                            <h3 class="card_title">Super Cool Project</h3>
-                            <p class="card_subtitle">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh
-                                erat, id facilisis felis accumsan nec.</p>
-                        </div>
-                        <div class="card_actions">
-                            <img src="assets/placeholder.png" alt="">
-                            <img src="assets/placeholder.png" alt="">
-                            <img src="assets/placeholder.png" alt="">
+                            <img src="assets/star-plus-outline.svg">
+                            <img src="assets/eye-plus-outline.svg">
+                            <img src="assets/source-fork.svg">
                         </div>
                     </div>
                 </div>
@@ -144,13 +96,12 @@
                     <div class="card_body">
                         <div>
                             <h3 class="card_title">Super Cool Project</h3>
-                            <p class="card_subtitle">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh
-                                erat, id facilisis felis accumsan nec.</p>
+                            <p class="card_subtitle">Sed tempus ut lacus ut scelerisque.</p>
                         </div>
                         <div class="card_actions">
-                            <img src="assets/placeholder.png" alt="">
-                            <img src="assets/placeholder.png" alt="">
-                            <img src="assets/placeholder.png" alt="">
+                            <img src="assets/star-plus-outline.svg">
+                            <img src="assets/eye-plus-outline.svg">
+                            <img src="assets/source-fork.svg">
                         </div>
                     </div>
                 </div>
@@ -159,78 +110,135 @@
                     <div class="card_body">
                         <div>
                             <h3 class="card_title">Super Cool Project</h3>
-                            <p class="card_subtitle">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh
-                                erat, id facilisis felis accumsan nec.</p>
+                            <p class="card_subtitle">Sed tempus ut lacus ut scelerisque.</p>
                         </div>
                         <div class="card_actions">
-                            <img src="assets/placeholder.png" alt="">
-                            <img src="assets/placeholder.png" alt="">
-                            <img src="assets/placeholder.png" alt="">
+                            <img src="assets/star-plus-outline.svg">
+                            <img src="assets/eye-plus-outline.svg">
+                            <img src="assets/source-fork.svg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card_body">
+                        <div>
+                            <h3 class="card_title">Super Cool Project</h3>
+                            <p class="card_subtitle">
+                                Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat.
+                                Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat.
+                            </p>
+                        </div>
+                        <div class="card_actions">
+                            <img src="assets/star-plus-outline.svg">
+                            <img src="assets/eye-plus-outline.svg">
+                            <img src="assets/source-fork.svg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card_body">
+                        <div>
+                            <h3 class="card_title">Super Cool Project</h3>
+                            <p class="card_subtitle">Sed tempus ut lacus ut scelerisque.</p>
+                        </div>
+                        <div class="card_actions">
+                            <img src="assets/star-plus-outline.svg">
+                            <img src="assets/eye-plus-outline.svg">
+                            <img src="assets/source-fork.svg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card_body">
+                        <div>
+                            <h3 class="card_title">Super Cool Project</h3>
+                            <p class="card_subtitle">Sed tempus ut lacus ut scelerisque.</p>
+                        </div>
+                        <div class="card_actions">
+                            <img src="assets/star-plus-outline.svg">
+                            <img src="assets/eye-plus-outline.svg">
+                            <img src="assets/source-fork.svg">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- SIDEBAR RIGHT -->
         <aside class="sidebar">
+
             <div class="announcements">
                 <div class="main-header">Announcements</div>
+
                 <div class="announcements-body">
+
                     <div class="announcement">
                         <h3 class="ann-header">Site Maintenance</h3>
-                        <p class="ann-text">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh
-                            erat.</p>
+                        <p class="ann-text">Sed tempus ut lacus ut scelerisque.</p>
                     </div>
+
                     <hr>
+
                     <div class="announcement">
                         <h3 class="ann-header">Site Maintenance</h3>
-                        <p class="ann-text">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh
-                            erat.</p>
+                        <p class="ann-text">Sed tempus ut lacus ut scelerisque.</p>
                     </div>
+
                     <hr>
+
                     <div class="announcement">
                         <h3 class="ann-header">Site Maintenance</h3>
-                        <p class="ann-text">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh
-                            erat.</p>
+                        <p class="ann-text">Sed tempus ut lacus ut scelerisque.</p>
                     </div>
+
                 </div>
             </div>
+
             <div class="trending">
                 <div class="main-header">Trending</div>
+
                 <div class="trending-body">
+
                     <div class="trending-item">
-                        <img src="assets/placeholder.png" alt="Morgan Oakley" class="avatar">
-                        <div class="user-text">
-                            <div class="user-nick">@tegan</div>
-                            <div class="user-message">World Peace Builder</div>
-                        </div>
-                    </div>
-                    <div class="trending-item">
-                        <img src="assets/placeholder.png" alt="Morgan Oakley" class="avatar">
-                        <div class="user-text">
-                            <div class="user-nick">@tegan</div>
-                            <div class="user-message">World Peace Builder</div>
-                        </div>
-                    </div>
-                    <div class="trending-item">
-                        <img src="assets/placeholder.png" alt="Morgan Oakley" class="avatar">
-                        <div class="user-text">
-                            <div class="user-nick">@tegan</div>
-                            <div class="user-message">World Peace Builder</div>
-                        </div>
-                    </div>
-                    <div class="trending-item">
-                        <img src="assets/placeholder.png" alt="Morgan Oakley" class="avatar">
+                        <img src="assets/placeholder.png" class="avatar">
                         <div class="user-text">
                             <div class="user-nick">@tegan</div>
                             <div class="user-message">World Peace Builder</div>
                         </div>
                     </div>
 
+                    <div class="trending-item">
+                        <img src="assets/placeholder.png" class="avatar">
+                        <div class="user-text">
+                            <div class="user-nick">@tegan</div>
+                            <div class="user-message">World Peace Builder</div>
+                        </div>
+                    </div>
+
+                    <div class="trending-item">
+                        <img src="assets/placeholder.png" class="avatar">
+                        <div class="user-text">
+                            <div class="user-nick">@tegan</div>
+                            <div class="user-message">World Peace Builder</div>
+                        </div>
+                    </div>
+
+                    <div class="trending-item">
+                        <img src="assets/placeholder.png" class="avatar">
+                        <div class="user-text">
+                            <div class="user-nick">@tegan</div>
+                            <div class="user-message">World Peace Builder</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </aside>
-    </div>
 
+        </aside>
+
+    </div>
 </body>
 
 </html>

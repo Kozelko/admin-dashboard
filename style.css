@@ -9,10 +9,65 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* keep page centered */
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
+/* ===== GLOBAL UTILITIES ===== */
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* jednotná karta / box vzhľad */
+.card,
+.announcements-body,
+.trending-body {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(16, 24, 40, 0.182);
+}
+
+/* opakované horizontálne paddingy */
+.card,
+.announcement,
+.trending-item {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* rôzne avatary */
+.avatar {
+    border-radius: 99px;
+}
+
+.trending-item>.avatar,
+.header-top-actions>.avatar {
+    width: 35px;
+}
+
+.user-header>.avatar {
+    width: 55px;
+}
+
+/* jednotná ikonka */
+.search-wrapper>img,
+.header-top-actions>img,
+.card_actions>img {
+    width: 24px;
+}
+
+.icon-white {
+    filter: invert(1);
+    width: 28px;
+    display: block;
+    object-fit: cover;
+}
+
+/* ===== GRID LAYOUT ===== */
 
 .content {
     display: grid;
@@ -20,39 +75,33 @@ body {
     max-width: 1300px;
     margin: 0 auto;
     flex: 1 1 auto;
-    /* allow content to grow and fill the viewport */
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: auto 1fr;
-    /* header auto, main fills remaining space */
     grid-template-areas:
         'dashboard header header'
-        'dashboard main sidebar'
-    ;
+        'dashboard main sidebar';
 }
+
+/* ===== DASHBOARD ===== */
 
 .dashboard {
     grid-area: dashboard;
     display: flex;
     flex-direction: column;
-    /* border: 1px black solid; */
     gap: 50px;
     background-color: rgb(53, 154, 255);
     color: #ffffff;
     padding-top: 20px;
 }
 
-.dashboard a {
-    color: inherit;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-
+.dashboard a,
 .dashboard h1,
 .dashboard h3,
 .dashboard p,
 .dashboard li {
     color: inherit;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .dashboard>ul {
@@ -64,18 +113,10 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-
 }
 
-.dashboard img {
-    width: 28px;
-    height: 28px;
-    object-fit: cover;
-    display: block;
-}
-
-.dashboard-logo {
-    padding: 0;
+.dashboard-img {
+    width: 50px;
 }
 
 .dashboard-nav li,
@@ -83,48 +124,21 @@ body {
     padding: 8px 0;
 }
 
-
-.dashboard-logo>li>h1 {
-    font-size: 26px;
-    margin: 0;
-    padding: 0;
-}
-
 .dashboard-logo>li {
     display: flex;
     align-items: center;
 }
 
+.dashboard-logo>li>h1 {
+    font-size: 26px;
+    margin: 0;
+}
+
+/* ===== HEADER ===== */
+
 .header {
     grid-area: header;
-    /* border: 1px black solid; */
-    /* display: block; */
-    padding: 20px 20px;
-}
-
-.main {
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    /* border: 1px black solid; */
-}
-
-.sidebar {
-    grid-area: sidebar;
-    /* border: 1px black solid; */
-}
-
-a {
-    text-decoration: none;
-}
-
-li {
-    list-style: none;
-}
-
-.header {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 20px 50px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -142,7 +156,6 @@ li {
     display: flex;
     gap: 5px;
     align-items: center;
-    /* padding: 8px 12px; */
     border-radius: 999px;
     flex-grow: 1;
     max-width: 720px;
@@ -159,10 +172,13 @@ li {
     min-width: 0;
 }
 
-.header-top-actions {
+.header-top-actions,
+.header-bottom-actions,
+.user-header,
+.trending-item {
     display: flex;
-    gap: 16px;
     align-items: center;
+    gap: 16px;
 }
 
 .header-bottom {
@@ -170,16 +186,7 @@ li {
     justify-content: space-between;
 }
 
-.user-header,
-.trending-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
 .header-bottom-actions {
-    display: flex;
-    align-items: center;
     gap: 20px;
 }
 
@@ -192,6 +199,8 @@ li {
     font-size: 24px;
     font-weight: bold;
 }
+
+/* ===== BUTTONS ===== */
 
 button {
     font-weight: bold;
@@ -207,13 +216,20 @@ button {
     align-items: center;
 }
 
+/* ===== MAIN CONTENT ===== */
+
 .main {
-    padding-top: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
+    grid-area: main;
+    padding: 30px 10px 0;
     display: flex;
     flex-direction: column;
     background-color: rgba(211, 211, 211, 0.456);
+}
+
+.main-header {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 20px;
 }
 
 .projects {
@@ -225,6 +241,21 @@ button {
 
 .card {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_body {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1 1 auto;
+    justify-content: space-between;
+}
+
+.card_title {
+    font-size: 17px;
 }
 
 .card_subtitle {
@@ -232,99 +263,52 @@ button {
     font-size: 15px;
 }
 
-.card_body {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
 .card_actions {
+    display: flex;
+    gap: 10px;
     margin-left: auto;
 }
 
+/* ===== SIDEBAR ===== */
 
 .sidebar {
+    grid-area: sidebar;
     display: flex;
     flex-direction: column;
-    padding-top: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 30px 10px 0;
     background-color: rgba(211, 211, 211, 0.456);
     gap: 20px;
 }
 
-.announcements-body {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
+/* Announcements & Trending */
 
-}
-
-.card,
 .announcements-body,
 .trending-body {
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 8px 20px rgba(16, 24, 40, 0.182);
-}
-
-
-h3 {
-    padding: 0;
-    margin: 0;
-    font-size: 18px;
-}
-
-.announcement,
-.trending-item,
-.card {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.trending {
-    flex-grow: 1;
-}
-
-.ann-text {
-    font-size: 14px;
+    padding: 10px 0;
 }
 
 .ann-header {
     font-size: 16px;
 }
 
-.main-header {
-    font-size: 20px;
-    font-weight: bold;
-    padding-bottom: 20px;
+.ann-text,
+.user-message {
+    font-size: 14px;
 }
 
-.trending-body,
-.announcements-body {
-    padding-top: 10px;
-    padding-bottom: 10px;
+.user-message {
+    color: rgba(0, 0, 0, 0.738);
+}
+
+.trending {
+    flex-grow: 1;
 }
 
 .trending-body {
     display: flex;
     flex-direction: column;
-    background-color: white;
-    gap: 20px;
+    gap: 15px;
 }
-
-.user-message {
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.738);
-}
-
-
-.card_title {
-    font-size: 17px;
-}
-
 
 hr {
     display: block;
@@ -333,6 +317,11 @@ hr {
     margin: 0.5em auto;
     border: none;
     background-color: rgba(0, 0, 0, 0.297);
-    /* subtle visible line */
     border-radius: 2px;
+}
+
+h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
 }
